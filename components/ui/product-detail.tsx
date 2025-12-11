@@ -4,6 +4,7 @@ import Stripe from "stripe";
 import Image from "next/image";
 import { Button } from "./button";
 import { useCartStore } from "@/store/cart-store";
+import Link from "next/dist/client/link";
 
 interface Props {
   product: Stripe.Product;
@@ -54,6 +55,7 @@ export const ProductDetail = ({ product }: Props) => {
           </Button>
           <span className="text-lg font-semibold">{quantity}</span>
           <Button onClick={onAddItem}>+</Button>
+          <Link  className=" bg-black p-2 rounded-lg text-white hover:underline" href="/checkout">Proceed to checkout</Link>
         </div>
       </div>
     </div>

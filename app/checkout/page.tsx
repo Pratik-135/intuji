@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCartStore } from "@/store/cart-store";
+import { checkoutAction } from "./checkout-action";
 
 export default function CheckoutPage() {
   const { items, removeItem, addItem } = useCartStore();
