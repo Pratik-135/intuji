@@ -1,4 +1,5 @@
 import { stripe } from "@/lib/stripe";
+import { ProductList } from "@/components/ui/product-list";
 
 export default  async function ProductsPage() {
 
@@ -9,8 +10,8 @@ export default  async function ProductsPage() {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold mb-6">Our Products</h1>
-            <PorductList products={products.data} />
+            <h1 className=" text-center text-3xl font-bold mb-6 mt-2 py-2">All of Our Products</h1>
+            <ProductList products={products.data} />
         </div>
     );
 }
