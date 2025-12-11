@@ -3,7 +3,7 @@
 import Stripe from "stripe";
 import Image from "next/image";
 import { Button } from "./button";
-
+import { useCartStore } from "@/store/cart-store";
 
 interface Props {
   product: Stripe.Product;

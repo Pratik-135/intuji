@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import Stripe from "stripe";
 import { Card, CardContent, CardHeader, CardTitle } from "./card";
@@ -40,7 +39,10 @@ export const ProductCard = ({ product }: Props) => {
               ${(price.unit_amount / 100).toFixed(2)}
             </p>
           )}
-          <Button className="mt-4 bg-black text-white">View Details</Button>
+          <div className="flex  mt-4 space-x-2">
+          <Button className=" bg-black text-white">View Details</Button>
+          <Button className=" bg-gray-800 text-white">Add to Cart</Button>
+          </div>
         </CardContent>
       </Card>
     </Link>
