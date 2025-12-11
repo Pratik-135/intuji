@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { Carousel } from "@/components/ui/carousel";
 import { stripe } from "@/lib/stripe";
 
 export default async function ProductsPage() {
@@ -38,13 +39,16 @@ export default async function ProductsPage() {
           </div>
            <Image
             alt="Hero Image"
-            src="/hero-image.png"
+            src={products.data[0].images[0]}
             className="rounded"
             width={450}
             height={450}
           />
        
         </div>
+      </section>
+       <section className="py-8">
+        <Carousel products={products.data} />
       </section>
   
     </div>
